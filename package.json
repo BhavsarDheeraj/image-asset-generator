@@ -1,0 +1,19 @@
+{
+  "name": "imageassetsgenerator",
+  "version": "1.0.0",
+  "description": "Single app to get all your Assets and icons ready!",
+  "main": "main.js",
+  "dependencies": {},
+  "devDependencies": {
+    "asar": "^0.14.1",
+    "electron": "^1.8.2",
+    "electron-packager": "^11.0.0"
+  },
+  "scripts": {
+    "start": "electron .",
+    "package": "asar pack AssetGenerator-darwin-x64/AssetGenerator.app/Contents/Resources/app AssetGenerator-darwin-x64/AssetGenerator.app/Contents/Resources/app.asar",
+    "build": "electron-packager . AssetGenerator && cp icon.icns AssetGenerator-darwin-x64/AssetGenerator.app/Contents/Resources/electron.icns"
+  },
+  "author": "Dheeraj Bhavsar <dheerajbhavsar@icloud.com>",
+  "license": "ISC"
+}
